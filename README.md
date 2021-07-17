@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+<h1 align="center">A simplified Code Editor built with ReactJS</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What is this
 
-## Available Scripts
+It is a basic code editor that contains html, css and javascript files available to code. It has a editor window where you can code live and a live view window which hot reloads the code that you are typing in the editor.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- HTML, CSS, JS capability
+- Editor with a syntax highlighting and linting
+- Live view window that renders real time
+- Export option to save your code for later usage
+- An endpoint to load the previously exported code
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Libraries Used
+- React
+- React Router
+- CodeMirror
+- Axios
+- Github Gist API for saving the exported files.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Setting up development environment
 
-### `npm test`
+- Install [NodeJS](https://nodejs.org/en/) if you don't have it already and check if npm is installed by running npm command in your terminal.
+- `git clone https://github.com/Deekshith-Reddy/dyte-editorio.git`
+- Create an empty `.env` file in root and add `REACT_APP_GITHUB_TOKEN =` with the personal access token from github developer settings with access given to gist (here I left my api in the env file I will remove the access to the api as soon as the results are out.)
+- Make sure you are in the directory which contains `package.json` file and run `npm run install`
+- After the libraries are installed use `npm start` command to start the development server to work on the editor.
+- If you just want to use the editor but not the export and loading functionalities you can visit [https://deekshith-reddy.github.io/dyte-editorio/](https://deekshith-reddy.github.io/dyte-editorio/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What's missing ?
+- Due to the react routing functionality the exporting and loading functionalities of the editor are not working using github pages.
+- There are certain other features like refreshing the editor window and changing theme will be added soon.
 
-### `npm run build`
+## Design Links
+- Wireframe : [https://wireframe.cc/qT2flj](https://wireframe.cc/qT2flj)
+- Figma     : [https://www.figma.com/file/3c0ap3CC5x9mLPJ48iho8k/Untitled?node-id=3%3A2](https://www.figma.com/file/3c0ap3CC5x9mLPJ48iho8k/Untitled?node-id=3%3A2)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
