@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/editorio-dyte/static/css/main.2a1839f3.chunk.css",
+    "main.js": "/editorio-dyte/static/js/main.515aabc0.chunk.js",
+    "main.js.map": "/editorio-dyte/static/js/main.515aabc0.chunk.js.map",
+    "runtime-main.js": "/editorio-dyte/static/js/runtime-main.a2fa7f97.js",
+    "runtime-main.js.map": "/editorio-dyte/static/js/runtime-main.a2fa7f97.js.map",
+    "static/css/2.3012f055.chunk.css": "/editorio-dyte/static/css/2.3012f055.chunk.css",
+    "static/js/2.27f35027.chunk.js": "/editorio-dyte/static/js/2.27f35027.chunk.js",
+    "static/js/2.27f35027.chunk.js.map": "/editorio-dyte/static/js/2.27f35027.chunk.js.map",
+    "index.html": "/editorio-dyte/index.html",
+    "static/css/2.3012f055.chunk.css.map": "/editorio-dyte/static/css/2.3012f055.chunk.css.map",
+    "static/css/main.2a1839f3.chunk.css.map": "/editorio-dyte/static/css/main.2a1839f3.chunk.css.map",
+    "static/js/2.27f35027.chunk.js.LICENSE.txt": "/editorio-dyte/static/js/2.27f35027.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2fa7f97.js",
+    "static/css/2.3012f055.chunk.css",
+    "static/js/2.27f35027.chunk.js",
+    "static/css/main.2a1839f3.chunk.css",
+    "static/js/main.515aabc0.chunk.js"
+  ]
+}
