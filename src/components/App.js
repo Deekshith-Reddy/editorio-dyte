@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import {Switch, Route, Router} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 import ContentUpdate from "./ContentUpdate";
 import Details from "./Details";
 import Editor from "./Editor";

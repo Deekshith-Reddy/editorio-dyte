@@ -10,41 +10,45 @@ function Exporter(props) {
     } = props
 
     const[id, setId] = useState('');
+    const[valid, setValid] = useState(true);
     const {REACT_APP_GITHUB_TOKEN} = process.env;
     const api = axios.create({
         baseURL: "https://api.github.com/gists"
     })
 
     useEffect(() => {
+        console.log(html);
         api.post('', {
             "files" : {
                 "html" : {
                     "filename": "html.txt",
                     "type": "text/plain",
                     "language": "Text",
-                    "content" : `${html}`
+                    "content" : `${html === ""?"E":html}`
                 },
                 "css" : {
                     "filename": "css.txt",
                     "type": "text/plain",
                     "language": "Text",
-                    "content" : `${css}`
+                    "content" : `${css===""?"E":css}`
                 },
                 "js" : {
                     "filename": "js.txt",
                     "type": "text/plain",
                     "language": "Text",
-                    "content" : `${js}`
+                    "content" : `${js===""?"E":js}`
                 }
             }
         }, {
             headers: {"Authorization": `Bearer ${REACT_APP_GITHUB_TOKEN}`}
         })
         .then(function (response){
+            setValid(true);
             setId(response.data.id);
             
         }).catch((e) => {
-            console.log(e)
+            setValid(false);
+            console.log(e.message)
         })
     }, [])
 
@@ -52,7 +56,8 @@ function Exporter(props) {
 
     return (
         <div>
-            <p>You can access your code at the endpoint <strong>/edit/{id}</strong> </p>
+            {valid? <p>You can access your code at the endpoint <strong>/edit/{id}</strong> </p> : <h3>Unsuccessful Export</h3>}
+            
         </div>
     )
 }
