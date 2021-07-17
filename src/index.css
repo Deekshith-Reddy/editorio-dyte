@@ -37,6 +37,7 @@ hr {
   color: white;
   border-radius: .5rem;
   padding: 1%;
+  height: 60%;
 }
 
 .file-button-group {
@@ -107,10 +108,128 @@ iframe {
   border-radius: .5rem;
 }
 
-.details {
-  margin: 3% 20% 1%;
+.CodeMirror {
+  height: 80vh !important;
 }
 
+.details {
+  
+  margin-top: 3%;
+  position: absolute;
+  width: 85%;
+  height: 80vh;
+  top: 50px;
+  left: 30px;
+  z-index: 12;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 5%;
+  border-radius: 0.5rem;
+  
+}
+
+.details .details-title, .details-content {
+  margin: 1% 20% 3%;
+}
+
+/* details close button inside the details div */
+.details-close-indiv {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  color: transparent;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  
+  letter-spacing: 1.5px;
+  line-height: 45px;
+  outline: none;
+  overflow: hidden;
+  
+  text-transform: uppercase;
+  
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in;
+  width: 50px;
+}
+
+.details-close-indiv::before,
+.details-close-indiv::after {
+  background-color: yellow;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform-origin: center left;
+  transition: all 0.2s ease-in;
+  width: 141.4214px;
+  z-index: -1;
+}
+
+.details-close-indiv::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.details-close-indiv::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.details-close-indiv:hover {
+  color: #111b3c;
+}
+
+.details-close-indiv:hover::before,
+.details-close-indiv:hover::after {
+  height: 50px;
+  transform: rotate(0deg);
+}
+
+/* details show button at the bottom of the filemanager */
+
+
+.details-button {
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  bottom: 5%;
+  width:calc(6vw + 3px);
+  height:calc(3vw + 8px);
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  border-radius:5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  font-size:1vw;
+  font-weight:bold;
+}
+.details-button:after {
+  content:attr(alt);
+  width:6vw;
+  height:3vw;
+  border-radius: 5px;
+  background-color: #f4f5fc;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+.details-button:hover {
+  animation:slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
 
 li{
   line-height: 1.7em;

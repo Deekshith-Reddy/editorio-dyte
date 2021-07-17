@@ -1,8 +1,17 @@
 import React from 'react'
 
-function Details() {
+function Details(props) {
+    const {
+        setShowDetails
+    } = props
+
+    const handleCloseClick = () => {
+        setShowDetails(false)
+    }
+
     return (
         <div className="details">
+            <button className="details-close-indiv"  onClick={handleCloseClick}>CLOSE</button>
             <h3 className="details-title">Details: </h3>
             <div className="details-content">
                 <ol>

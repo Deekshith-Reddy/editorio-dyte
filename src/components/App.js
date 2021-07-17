@@ -33,6 +33,8 @@ function App() {
   const[cssTab, setCssTab] = useState(false);
   const[jsTab, setJsTab] = useState(false);
 
+  const[showDetails, setShowDetails] = useState(true);
+
   const indexHTMLClick = () =>{
     setHtmlTab(true);
     setCssTab(false)
@@ -51,6 +53,10 @@ function App() {
     setJsTab(true)
   }
 
+  const showDetailHandler = () => {
+    setShowDetails(true);
+  }
+
 
   return (
     
@@ -67,6 +73,7 @@ function App() {
         <button className={htmlTab?"file-button-clicked":"file-button"} onClick={() => {indexHTMLClick(true)}}>| index.html</button>
         <button className={cssTab?"file-button-clicked":"file-button"} onClick={() => {indexCSSClick(true)}}>| index.css</button>
         <button className={jsTab?"file-button-clicked":"file-button"} onClick={() => {indexJSClick(true)}}>| index.js</button>
+        <button className="details-button" alt="Details" onClick={showDetailHandler}></button>
         </div>
       </div>
 
@@ -103,8 +110,8 @@ function App() {
     </Route>
 
     </Switch>
+    {showDetails? <Details setShowDetails={setShowDetails}></Details>: ""}
     
-    <Details></Details>
     </>
   );
 }
